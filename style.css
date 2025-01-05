@@ -127,10 +127,10 @@ nav {
 #first_mian_div {
     width: 100%;
     height: 90vh;
-    background: linear-gradient(to top right, rgb(0, 0, 0),rgba(105, 104, 104, 0.596) 100%),url(aserts/new\ bg.jpg);
+    background: linear-gradient(to top right, rgb(0, 0, 0),rgba(105, 104, 104, 0.596) 100%),url(aserts/new\ bg\ ...png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: right;
 }
 
 .first_mian_div_parent_of_other {
@@ -138,8 +138,8 @@ nav {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 80%;
+    width: 35%;
+    height: 100%;
     padding-left: 4%;
 }
 
@@ -147,10 +147,14 @@ nav {
     font-size: var(--h3-font-size);
     color: azure;
     font-weight: var(--font-weight-semibold);
-    font-family: 'Georgia', serif;
+    font-family: 'Franklin Gothic Medium', serif;
     text-transform: uppercase;
-    line-height: 1.5em;
+    line-height: 1.3em;
     margin-bottom: 0.5em;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: fadeIn 0.5s ease-out forwards;
+    margin-bottom: 0.8em;
 }
 
 
@@ -160,9 +164,12 @@ nav {
     font-weight: var(--font-weight-normal);
     font-family: "Comfortaa", serif;
     text-transform: capitalize;
-    line-height: 1.5em;
+    line-height: 0.1px;
     white-space: nowrap;
     margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: fadeIn 0.7s ease-out forwards;
 }
 
 .inner_div_first_main_div p span {
@@ -182,44 +189,18 @@ nav {
 }
 
 .home_page_bottun button {
-    padding: 0.8rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 4em;
     text-decoration: none;
     border: none;
     text-transform: capitalize;
     font-family: "Comfortaa", serif;
+    color: rgb(7, 7, 189);
+    opacity: 0;
+    transform: translateY(80px);
+    animation: fadeIn 0.9s ease-out forwards;
 }
 
-#first_main_div_inner_options_parent {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.first_main_div_inner_options {
-    height: 9rem;
-    box-shadow: 1px 1px 14px rgb(163, 10, 10);
-    background:var(--options_bg_color);
-    width: 9rem;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    font-size: var(--h4-font-size);
-    color: bisque;
-    font-family: sans-serif;
-    padding: 10px;
-    font-weight: var(--font-weight-semibold);
-}
-
-#first_main_div_inner_options_parent a {
-    text-decoration: none;
-    text-transform: capitalize;
-
-}
 
 
 @keyframes blink-cursor {
@@ -231,6 +212,17 @@ nav {
     }
   }
 
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -241,22 +233,66 @@ nav {
 
 .home_page_bottun button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.02);
     box-shadow: 0px 0px 8px rgba(10, 126, 68, 0.863);
+    background-color: rgb(231, 244, 255);
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////// FIRST MAIN DIV COMPLETE ////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////// */
 
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////// SECOND MAIN EMPTY DIV ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.five_option_parent {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.five_options button {
+    height: 9em;
+    box-shadow: 1px 1px 7px rgb(24, 24, 24);
+    background:var(--options_bg_color);
+    width: 9em;
+    text-align: center;
+    font-size: var(--h4-font-size);
+    color: bisque;
+    font-family: sans-serif;
+    padding: 10px;
+    margin-top: 1em;
+    font-weight: var(--font-weight-semibold);
+    border-radius: 2em;
+    text-transform: capitalize;
+    border: none;
+}
+
 .second_mian_div_parent_of_other_empty_bg {
-    height: 70vh;
+    height: 125vh;
     width: 100%;
-    background-image: url(aserts/Online-Quran-Learning\ \(1\).jpg);
+    background:linear-gradient(to top right, rgb(116, 115, 115),rgba(180, 180, 180, 0.596) 100%),url(aserts/1st\ empty.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.five_options button:hover {
+    background: var(--options_bg_color_hover);
 }
 
 
@@ -278,9 +314,9 @@ nav {
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 .third_mian_div_parent_of_other_empty_bg {
-    height: 70vh;
+    height: 100vh;
     width: 100%;
-    background-image: url(aserts/hdesh\ book\ wallpaper.jpeg);
+    background: linear-gradient(to top left, rgb(116, 115, 115),rgba(180, 180, 180, 0.596) 100%),url(aserts/hdesh\ book\ wallpaper.jpeg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -294,7 +330,7 @@ nav {
 .third_mian_div_parent_of_other {
     width: 100%;
     height: 125vh;
-    background-image: url(aserts/hadees\ bg\ wallpaper.png);
+    background:linear-gradient(to right, rgb(241, 252, 145),rgba(246, 247, 230, 0.171) 100%),url(aserts/new\ hadees\ bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right top;
@@ -305,7 +341,7 @@ nav {
 /* //////////////////////////////////////////////////////////////////////////////// */
 
 .contact_div_empty_bg {
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     background-image: url(aserts/khulasa\ tul\ faraz\ bg.png);
     background-attachment: fixed;

@@ -47,3 +47,57 @@ document.getElementById('btn_to_go_to_reading_rule').addEventListener('click',
         window.location.href = 'inheritancerules.html'
     }
 )
+
+
+
+
+
+// //////////////// SIX OPTIONS ///////////////
+
+// ///////// buttton 1 /////////////
+
+document.getElementById('quranic verses').addEventListener('click', 
+  function (){
+      window.location.href = 'quranic_verses.html'
+  }
+)
+
+// ///////// buttton 2 /////////////
+
+document.getElementById('ahadedh').addEventListener('click', 
+  function (){
+      window.location.href = 'ahadedh.html'
+  }
+)
+
+// ///////// buttton 3 /////////////
+
+document.getElementById('read rules').addEventListener('click', 
+  function (){
+      window.location.href = 'inheritancerules.html'
+  }
+)
+
+// ///////// buttton 4 /////////////
+
+document.getElementById('solve your Inheritance').addEventListener('click', 
+  function (){
+      window.location.href = 'solutionpage.html'
+  }
+)
+
+// ///////// buttton 5 /////////////
+
+document.getElementById('list of inheritors').addEventListener('click', 
+  function (){
+      window.location.href = 'inheritors.html'
+  }
+)
+
+// ///////// buttton 6 /////////////
+
+document.getElementById('contact us').addEventListener('click', 
+  function (){
+      window.location.href = 'contact.html'
+  }
+)
