@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
+
+
 // //////////////// MAIN PAGE BUTTONS ///////////////
+
 
 // ///////// buttton 1 /////////////
 
