@@ -1,0 +1,733 @@
+:root {
+    --nav_bg_color: linear-gradient(to top left, rgb(8, 126, 57), rgb(32, 187, 97), rgb(77, 221, 137), rgb(33, 243, 215) 100%);
+    --options_bg_color: linear-gradient(to top right, rgb(8, 126, 57) , rgb(32, 172, 90) , rgb(42, 190, 104), rgb(26, 187, 165));
+    --options_bg_color_hover: linear-gradient(to bottom left, rgb(7, 78, 37) , rgb(26, 136, 72) , rgb(27, 156, 81), rgb(18, 146, 129));
+    --text_bold_weight: 900;
+    --text_medium_weight: 500;
+    --text_thin_weight: 300;
+    --nav_item_text_size: 26px;
+
+
+    --h1-font-size: 76px;
+    --h2-font-size: 56px;
+    --h3-font-size: 42px;
+    --h4-font-size: 28px;
+    --h5-font-size: 26px;
+    --h6-font-size: 22px;
+
+    --p-font-size: 18px;
+    --menu-font-size: 18px;
+    --category-font-size: 14px;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 700;
+    --font-weight-bold: 700;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+.truggle_button {
+    display: none;
+}
+
+nav {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav_bg_color);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--nav_item_text_size);
+    height: 5rem;
+    text-align: center;
+    border-bottom: 0.3rem solid rgb(213, 243, 130);
+}
+
+#logo {
+    width: 20% !important;
+    display: flex;
+    margin-left: 1%;
+    align-items: center;
+}
+
+#logo img {
+    height: 4rem;
+    width: 9rem;
+}
+
+
+#nav_options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 65% !important;
+}
+
+.nav_item a {
+    text-align: center;
+    border-radius: 2rem;
+    transition-duration: 0.6s;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px slateblue;
+    font-family: sans-serif;
+}
+
+
+#nav_language_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+#nav_language_button button {
+    width: 8rem;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(223, 30, 30);
+    font-weight: var(--text_medium_weight);
+    color: white;
+    font-size: var(--nav_item_text_size);
+    border-radius: 2rem;
+    transition-duration: 0.6s;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.nav_item a:hover {
+    color: rgb(122, 13, 13);
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+#nav_language_button button:hover {
+    background-color: rgb(173, 45, 45);
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// NAVIGATION BAR COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// FIRST MAIN DIV START ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#first_mian_div {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to top right, rgb(0, 0, 0),rgba(105, 104, 104, 0.596) 100%),url(aserts/new\ bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.first_mian_div_parent_of_other {
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80%;
+    padding-left: 4%;
+}
+
+.inner_div_first_main_div h1 {
+    font-size: var(--h3-font-size);
+    color: azure;
+    font-weight: var(--font-weight-semibold);
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
+.inner_div_first_main_div p {
+    font-size: var(--menu-font-size);
+    color: rgb(163, 230, 230);
+    font-weight: var(--font-weight-normal);
+    font-family: "Comfortaa", serif;
+    text-transform: capitalize;
+    line-height: 1.5em;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+}
+
+.inner_div_first_main_div p span {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    color: azure;
+    border-right: 4px solid #59f1b7;
+    animation: blink-cursor 700ms step-end infinite;
+}
+
+.home_page_bottun {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3em;
+    width: 100%;
+}
+
+.home_page_bottun button {
+    padding: 0.8rem 1rem;
+    border-radius: 4em;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    font-family: "Comfortaa", serif;
+}
+
+#first_main_div_inner_options_parent {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.first_main_div_inner_options {
+    height: 9rem;
+    box-shadow: 1px 1px 14px rgb(163, 10, 10);
+    background:var(--options_bg_color);
+    width: 9rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--h4-font-size);
+    color: bisque;
+    font-family: sans-serif;
+    padding: 10px;
+    font-weight: var(--font-weight-semibold);
+}
+
+#first_main_div_inner_options_parent a {
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+
+@keyframes blink-cursor {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #19e09e;
+    }
+  }
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.first_main_div_inner_options:hover {
+    background: var(--options_bg_color_hover);
+}
+
+.home_page_bottun button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px rgba(10, 126, 68, 0.863);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// FIRST MAIN DIV COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.second_mian_div_parent_of_other_empty_bg {
+    height: 70vh;
+    width: 100%;
+    background-image: url(aserts/Online-Quran-Learning\ \(1\).jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// SECOND MAIN DIV START //////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.second_mian_div_parent_of_other {
+    width: 100%;
+    height: 100vh;
+    background-image: url(aserts/new\ ayat\ pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// SECOND MAIN DIV COMPLETE ///////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.third_mian_div_parent_of_other_empty_bg {
+    height: 70vh;
+    width: 100%;
+    background-image: url(aserts/hdesh\ book\ wallpaper.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// THIRD MAIN DIV START ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.third_mian_div_parent_of_other {
+    width: 100%;
+    height: 125vh;
+    background-image: url(aserts/hadees\ bg\ wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// THIRD MAIN DIV COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.contact_div_empty_bg {
+    height: 70vh;
+    width: 100%;
+    background-image: url(aserts/khulasa\ tul\ faraz\ bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// CONTACT DIV START //////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.contact_main_div {
+    background-image: url(aserts/contac\ bg.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 30em;
+    width: 50em;
+    border-radius: 2.5em;
+    background-color: rgb(16, 141, 158);
+    box-shadow: 1px 1px 5px rgb(24, 24, 24);
+}
+
+.form_div div h1 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    font-family: 'Segoe UI' , serif;
+    color: azure;
+    text-decoration: underline;
+}
+
+.form_div form {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    border: none;
+    background-color: gainsboro;
+    font-size: var(--menu-font-size);
+    color: rgb(0, 68, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-family: 'Lucida Sans', serif;
+    border-radius: 1rem;
+    padding: 7px;
+    padding-left: 1rem;
+}
+textarea {
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: gainsboro;
+    font-size: var(--h6-font-size);
+    font-family: 'Lucida Sans', serif;
+    color: rgb(0, 68, 255);
+    border-radius: 1em;
+    padding: 7px;
+    padding-left: 1rem;
+}
+
+#form_btn {
+    width: 80%;
+    border: none;
+    background-color: rgb(18, 168, 136);
+    box-shadow: 0px 0px 5px black;
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-weight-semibold);
+    font-family: Verdana, serif;
+    color: rgb(255, 255, 255);
+    border-radius: 0.2em;
+    text-align: center;
+    padding: 7px;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// ICONS ///////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+.icons_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 5px;
+}
+
+.icons {
+    height: 3em;
+    width: 3em;
+    border-radius: 3em;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px whitesmoke;
+}
+
+.icons img {
+    height: 3em;
+    width: 3em;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#form_btn:hover {
+    background-color: rgb(10, 117, 94);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////// RESPONSIVE SECTION /////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// MEDIA QUERY /////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////// for mobile screen /////////////////////////// */
+
+@media screen and (max-width: 480px) {
+
+nav {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-left: 3%;
+}
+
+#logo img {
+    height: 3rem;
+    width: 8rem;
+}
+
+
+.truggle_button {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 5%;
+ }
+
+.truggle_button_lines {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+
+#nav_options {
+    display: none;
+}
+
+#nav_language_button {
+    display: none;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// NAVIGATION BAR COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// FIRST MAIN DIV START ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+#first_mian_div {
+    height: 87vh;
+    background-position:calc(100% - -5rem) center;
+}
+
+.first_mian_div_parent_of_other {
+    width: 90%;
+    height: 90%;
+}
+
+.inner_div_first_main_div h1 {
+    font-size: 35px;
+    text-align: left;
+}
+
+.first_main_div_inner_options {
+    height: 6rem;
+    width: 6rem;
+    font-size: var(--h1-font-size-size);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 1rem;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// FIRST MAIN DIV COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.second_mian_div_parent_of_other_empty_bg {
+    height: 50vh;
+    width: 100%;
+    background-image: url(aserts/Online-Quran-Learning\ \(1\).jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// SECOND MAIN DIV START //////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.second_mian_div_parent_of_other {
+    width: 100%;
+    height: 100vh;
+    background-image: url(aserts/landscape-ayat\ bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// SECOND MAIN DIV COMPLETE ///////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.third_mian_div_parent_of_other_empty_bg {
+    height: 70vh;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// THIRD MAIN DIV START ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.third_mian_div_parent_of_other {
+    width: 100%;
+    height: 85vh;
+    background-image: url(aserts/landscape\ hadees.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// THIRD MAIN DIV COMPLETE ////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.contact_div_empty_bg {
+    height: 70vh;
+    width: 100%;
+    background-image: url(aserts/landscape\ khulasa\ tul\ faraz\ bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// CONTACT DIV START //////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.contact_main_div {
+    background-image: url(aserts/contac\ bg.jpg);
+    width: 100%;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.form_div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 80%;
+    border-radius: 2.5em;
+    background-color: rgb(16, 141, 158);
+    box-shadow: 1px 1px 5px rgb(24, 24, 24);
+}
+
+.form_div div h1 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-semibold);
+}
+
+.form_div form {
+    height: 80%;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    font-size: 14px;
+}
+textarea {
+    width: 80%;
+    height: 47%;
+    font-size: 14px;
+}
+
+#form_btn {
+    width: 80%;
+    border: none;
+    background-color: rgb(18, 168, 136);
+    box-shadow: 0px 0px 5px black;
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-weight-normal);
+    font-family: Verdana, serif;
+    color: rgb(255, 255, 255);
+    border-radius: 0.2em;
+    text-align: center;
+    padding: 7px;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// ICONS ///////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+.icons_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 5px;
+}
+
+.icons {
+    height: 2em;
+    width: 2em;
+    border-radius: 3em;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px whitesmoke;
+}
+
+.icons img {
+    height: 2em;
+    width: 2em;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#form_btn:hover {
+    background-color: rgb(10, 117, 94);
+}    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for mobile lnadscape screen */
+
+@media screen and (min-width:481px) and (max-width: 767px) {}
+
+/* FOR TABLET PORTRAIT SCREEN */
+
+@media screen and (min-width:768px) and (max-width: 1024px) {}
+
+/* FOR TABLATES LANDSCAPE MODE  */
+
+@media screen and (min-width:1025px) and (max-width: 1200px) {}
+
+/* FOR LAPTOP AND SMALL DESKTOPS */
+
+@media screen and (min-width:1201px) and (max-width: 1600px) {}
+
+/* FOR LARGE DESKTOPS */
+
+@media screen and (min-width: 1601px) {}
