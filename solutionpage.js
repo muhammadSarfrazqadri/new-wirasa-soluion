@@ -36,6 +36,7 @@ function maslak_selection() {
   // Hide the current div and display the next one
   document.getElementById("maslak_main_div").style.display = "none";
   document.getElementById("second_div_solution_page_ashabeFaraiz").style.display = "flex";
+  document.getElementsByClassName("solution_page_main_div").style.height = "130vh";
 }
 
 
