@@ -37,6 +37,7 @@
     width: 100%;
     background-size: cover;
     background-position: right;
+    padding: 3em 0px;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -44,7 +45,14 @@
 }
 
 
-form {
+.first_main_div_maslak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#maslak_main_div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -52,7 +60,7 @@ form {
     height: 80%;
 }
 
-form h1 {
+#maslak_main_div h1 {
     text-transform: capitalize;
     font-size: var(--h1-font-size);
     font-family: "Comfortaa", serif;
@@ -60,14 +68,14 @@ form h1 {
     color: white;
 }
 
-form p {
+#maslak_main_div p {
     text-transform: capitalize;
     font-size: var(--h5-font-size);
     font-family: "Comfortaa", serif;
     color: white;
 }
 
-select {
+#maslak_main_div select {
     outline: none;
     width: 80%;
     font-family: "Comfortaa", serif;
@@ -78,10 +86,10 @@ select {
     height: 2em;
     padding: 5px;
     border-radius: 2em;
-    height: 2em;
+    height: 2.5em;
 }
 
-select option {
+#maslak_main_div select option {
     width: 80%;
     outline: none;
     background-color: rgb(37, 189, 151);
@@ -90,7 +98,7 @@ select option {
     text-transform: capitalize;
 }
 
-form button {
+#maslak_main_div button {
     outline: none;
     font-family: "Comfortaa", serif;
     font-size: var(--h6-font-size);
@@ -107,11 +115,103 @@ form button {
 }
 
 
-select:hover {
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#maslak_main_div select:hover {
     cursor: pointer;
 }
 
-form button:hover {
+#maslak_main_div button:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+/* //////////////// second_div_solution_page_ashabeFaraiz //////////////// */
+
+
+#second_div_solution_page_ashabeFaraiz {
+    border: 1px solid rgb(255, 0, 0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 80%;
+    padding: 5px;
+}
+
+#second_div_solution_page_ashabeFaraiz h1 {
+    text-transform: capitalize;
+    font-size: var(--h1-font-size);
+    font-family: "Comfortaa", serif;
+    text-decoration: underline;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.faraiz_12 {
+    border-bottom: 3px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 0.5em 1.5em;
+}
+
+.faraiz_12 label {
+    font-family: "Comfortaa", serif;
+    font-size: var(--h6-font-size);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+
+.faraiz_12 select {
+    outline: none;
+    font-family: "Comfortaa", serif;
+    font-size: var(--h6-font-size);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    background: lightseagreen;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 10px black;
+    height: 2.4rem;
+    width: 5em;
+    border-radius: 2em;
+}
+
+
+#second_div_solution_page_ashabeFaraiz button {
+    outline: none;
+    font-family: "Comfortaa", serif;
+    font-size: var(--h6-font-size);
+    text-align: center;
+    font-weight: 500;
+    background: lightseagreen;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 10px black;
+    height: 2em;
+    width: 50%;
+    border-radius: 2em;
+    height: 2em;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////// HOVER PORTION ///////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#second_div_solution_page_ashabeFaraiz select:hover {
+    cursor: pointer;
+}
+
+#second_div_solution_page_ashabeFaraiz button:hover {
     transform: scale(0.9);
     cursor: pointer;
 }

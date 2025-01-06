@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,226 @@
         rel="stylesheet">
     <link rel="stylesheet" href="solutionpage.css">
 </head>
+
 <body>
     <div class="solution_page_main_div">
-        <form action="" method="get">
+        <form id="maslak_main_div" action="" method="get">
             <h1>inheritor Details</h1>
             <p>Select Your Maslak</p>
             <select name="maslak option" id="maslak">
-                <option selected value="">Hanafi</option>
-                <option value="">Shafi'i</option>
-                <option value="">Maliki</option>
-                <option value="">Hanbali</option>
+                <option selected value="">-- Select --</option>
+                <option value="Hanafi">Hanafi</option>
+                <option value="Shafi'i">Shafi'i</option>
+                <option value="Maliki">Maliki</option>
+                <option value="Hanbali">Hanbali</option>
             </select>
-            <button  type="submit">Submit</button>
+            <button onclick="maslak_selection()" type="button">Submit</button>
+        </form>
+        <form style="display: none;"  id="second_div_solution_page_ashabeFaraiz" action="" method="get">
+            <h1>Inheritor's Details</h1>
+            <div class="faraiz_12" id="farz_1">
+                <label for="father">Is his/her Father alive ?</label>
+                <select name="father" id="father_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_2">
+                <label for="grand_father">Is his/her Grand Father alive ?</label>
+                <select name="grand_father" id="grand_father_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_3">
+                <label for="husband">Was her husband alive when she died ?</label>
+                <select name="husband" id="husband_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_4">
+                <label for="stepbrother">is his/her stepbrother alive ?</label>
+                <select name="stepbrother" id="stepbrother_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_5">
+                <label for="stepsister">is his/her stepsister alive ?</label>
+                <select name="stepsister" id="stepsister_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_6">
+                <label for="wife">Was his wife alive when he died ?</label>
+                <select name="wife" id="wife_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_7">
+                <label for="daughter">"does he/she have a daughter ?</label>
+                <select name="daughter" id="daughter_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_8">
+                <label for="granddaughter">"does he/she have a granddaughter ?</label>
+                <select name="granddaughter" id="granddaughter_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_9">
+                <label for="fullsister">"does he/she have a full sister ?</label>
+                <select name="fullsister" id="fullsister_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_10">
+                <label for="half_sister_(paternal)">"Is his/her half-sister (paternal) alive ?</label>
+                <select name="half_sister_(paternal)" id="half_sister_(paternal)_ashabeFaraiz">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_11">
+                <label for="mother">Is his/her mother alive ?</label>
+                <select name="mother" id="mother_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="faraiz_12" id="farz_12">
+                <label for="grand_mother">Is his/her Grand mother alive ?</label>
+                <select name="grand_mother" id="grand_mother_ashabeFaraiz">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <button onclick="maslak_selection()" type="button">Submit</button>
         </form>
     </div>
-<script src="solutionpage.js"></script>
+    <script src="solutionpage.js"></script>
 </body>
+
 </html>
