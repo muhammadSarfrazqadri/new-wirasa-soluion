@@ -124,15 +124,78 @@ function solution() {
     } else {
         faraiz_defined_part_obj.husband = 0;
     }
+    
+    if (faraiz_part_obj.step_brother > 0) {
+        faraiz_defined_part_obj.step_brother = step_brother_farz(
+            faraiz_part_obj.father,
+            faraiz_part_obj.grand_father,
+            faraiz_part_obj.son,
+            faraiz_part_obj.daughter,
+            faraiz_part_obj.grand_son,
+            faraiz_part_obj.grand_daughter,
+            faraiz_part_obj.step_brother,
+            faraiz_part_obj.step_sister
+        );
+    } else {
+        faraiz_defined_part_obj.step_brother = 0;
+    }
+    
+    if (faraiz_part_obj.step_sister > 0) {
+        faraiz_defined_part_obj.step_sister = step_sister_farz(
+            faraiz_part_obj.father,
+            faraiz_part_obj.grand_father,
+            faraiz_part_obj.son,
+            faraiz_part_obj.daughter,
+            faraiz_part_obj.grand_son,
+            faraiz_part_obj.grand_daughter,
+            faraiz_part_obj.step_brother,
+            faraiz_part_obj.step_sister
+        );
+    } else {
+        faraiz_defined_part_obj.step_sister = 0;
+    }
+
+    if (faraiz_part_obj.daughter > 0) {
+        faraiz_defined_part_obj.daughter = daughter_farz(
+            faraiz_part_obj.son,
+            faraiz_part_obj.daughter
+        );
+    } else {
+        faraiz_defined_part_obj.daughter = 0;
+    }
+
+    if (faraiz_part_obj.wife === "yes") {
+        faraiz_defined_part_obj.wife = wife_farz(
+            faraiz_part_obj.son,
+            faraiz_part_obj.grand_son,
+            faraiz_part_obj.daughter,
+            faraiz_part_obj.grand_daughter
+        );
+    } else {
+        faraiz_defined_part_obj.wife = 0;
+    }
+
+
+
+
+    if (faraiz_part_obj.grand_mother === "yes") {
+        faraiz_defined_part_obj.grand_mother = grand_mother_farz(
+            faraiz_part_obj.mother
+        );
+    } else {
+        faraiz_defined_part_obj.grand_mother = 0;
+    }
 
 
 
     console.log("Updated Defined Parts Object:", faraiz_defined_part_obj);
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-// Father Farz Calculation ///////////////////////////////////////////// faraiz functions/////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////// faraiz functions //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+/////////////////////////// father باپ  //////////////////////////////////////////////////
 
 
 function father_farz(son, grand_son, daughter, grand_daughter) {
@@ -141,9 +204,9 @@ function father_farz(son, grand_son, daughter, grand_daughter) {
     let farz_part = 0;
 
     if (son > 0 || grand_son > 0) {
-        farz_part = 1 / 6;
+        farz_part = 1/6;
     } else if ((daughter > 0 || grand_daughter > 0) && !(son > 0 || grand_son > 0)) {
-        farz_part = 1 / 6 + father_asbaa();
+        farz_part = 1/6 + father_asbaa();
     } else if (!(son > 0 && daughter > 0 && grand_daughter > 0 && grand_son > 0)) {
         farz_part = father_asbaa();
     }
@@ -152,16 +215,15 @@ function father_farz(son, grand_son, daughter, grand_daughter) {
     return farz_part;
 }
 
-/////////////////////////// grand father //////////////////////////////////////////////////
-
+/////////////////////////// grand father دادا //////////////////////////////////////////////////
 
 function grand_father_farz(son, grand_son, daughter, grand_daughter,father) {
     let farz_part = 0;
 
     if (son > 0 || grand_son > 0) {
-        farz_part = 1 / 6;
+        farz_part = 1/6;
     } else if ((daughter > 0 || grand_daughter > 0) && !(son > 0 || grand_son > 0)) {
-        farz_part = 1 / 6 + father_asbaa();
+        farz_part = 1/6 + father_asbaa();
     } else if (!(son > 0 && daughter > 0 && grand_daughter > 0 && grand_son > 0)) {
         farz_part = 0; // Or any default value
     } else if (father === "yes") {
@@ -170,6 +232,8 @@ function grand_father_farz(son, grand_son, daughter, grand_daughter,father) {
 
     return farz_part;
 }
+
+/////////////////////////// husband  شوہر //////////////////////////////////////////////////
 
 function husband_farz(son, grand_son, daughter, grand_daughter) {
     let farz_part = 0;
@@ -182,9 +246,94 @@ function husband_farz(son, grand_son, daughter, grand_daughter) {
     return farz_part;
 }
 
+/////////////////////////// step brother اخیافی بھائی //////////////////////////////////////////////////
+
+function step_brother_farz(father, grand_father, son, daughter, grand_son, grand_daughter, step_brother, step_sister){
+    let farz_part = 0;
+
+    if (father === "yes" || grand_father === "yes" || son > 0 || daughter > 0 || grand_son > 0 ||  grand_daughter > 0) {
+        farz_part = 0;
+    } else if (step_brother === 1 || step_sister === 1) {
+        farz_part = 1/6;
+    } else if (step_brother > 1 || step_sister > 1) {
+        farz_part = 1/3; 
+    }
+
+    return farz_part;
+}
+
+/////////////////////////// step sister اخیافی بہن//////////////////////////////////////////////////
+
+function step_sister_farz(father, grand_father, son, daughter, grand_son, grand_daughter, step_brother, step_sister){
+    let farz_part = 0;
+
+    if (father === "yes" || grand_father === "yes" || son > 0 || daughter > 0 || grand_son > 0 ||  grand_daughter > 0) {
+        farz_part = 0;
+    } else if (step_brother === 1 || step_sister === 1) {
+        farz_part = 1/6;
+    } else if (step_brother > 1 || step_sister > 1) {
+        farz_part = 1/3; 
+    }
+
+    return farz_part;
+}
+
+/////////////////////////// wife بیوی //////////////////////////////////////////////////
+
+function wife_farz(son, grand_son, daughter, grand_daughter) {
+    let farz_part = 0;
+
+    if ((son > 0 || daughter > 0 || grand_daughter > 0 || grand_son > 0)) {
+        farz_part = 1 / 8;
+    } else if (!(son > 0 && daughter > 0 && grand_daughter > 0 && grand_son > 0)) {
+        farz_part = 1 / 4;
+    }
+    return farz_part;
+}
+
+/////////////////////////// daugther بیٹی //////////////////////////////////////////////////
+
+function daughter_farz(son, daughter){
+    let farz_part = 0;
+
+    if (son > 0) {
+        farz_part = asbaa();
+    } else if (daughter === 1 && son === "no") {
+        farz_part = 1/2;
+    } else if (daughter > 1 && son === "no") {
+        farz_part = 2/3; 
+    }
+
+    return farz_part;
+}
+
+////////////////////////// grand daugther پوتی //////////////////////////////////////////////////
+
+
+///////////////////////////   FULL SISTER  سگی بہن //////////////////////////////////////////////////
+
+///////////////////////////  HALF SISTER PATERNAL  علاتی بہن //////////////////////////////////////////////////
+
+
+///////////////////////////  MOTHER  ماں //////////////////////////////////////////////////
+
+
+///////////////////////////  GRAND MOTHER  جدہ صحیحہ  //////////////////////////////////////////////////
+
+function grand_mother_farz(mother){
+    let farz_part = 0;
+
+    if (mother > "yes") {
+        farz_part = 0;
+    } else{
+        farz_part = 1/6;
+    }
+
+    return farz_part;
+}
 
 
 
-function father_asbaa() {
+function asbaa() {
     return 0;
 }
