@@ -138,7 +138,7 @@ nav {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 40%;
     height: 100%;
     padding-left: 4%;
 }
@@ -183,7 +183,7 @@ nav {
 .home_page_bottun {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 3em;
     width: 100%;
 }
@@ -197,6 +197,7 @@ nav {
     font-family: "Comfortaa", serif;
     color: rgb(7, 7, 189);
     opacity: 0;
+    font-size: var(--menu-font-size);
     transform: translateY(80px);
     animation: fadeIn 0.9s ease-out forwards;
 }

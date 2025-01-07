@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div class="solution_page_main_div">
+    <div id="solution_page_main_div" class="solution_page_main_div">
         <form id="maslak_main_div" action="" method="get">
-            <h1>inheritor Details</h1>
+            <h1>inheritor's Details</h1>
             <p>Select Your Maslak</p>
             <select name="maslak option" id="maslak">
                 <option selected value="">-- Select --</option>
@@ -23,33 +23,33 @@
                 <option value="Maliki">Maliki</option>
                 <option value="Hanbali">Hanbali</option>
             </select>
-            <button onclick="maslak_selection()" type="button">Submit</button>
+            <button onclick="to_go_faraiz_section()" type="button">Submit</button>
         </form>
-        <form style="display: none;"  id="second_div_solution_page_ashabeFaraiz" action="" method="get">
+        <form style="display: none;" id="second_div_solution_page_ashabeFaraiz" action="" method="get">
             <h1>Inheritor's Details</h1>
             <div class="faraiz_12" id="farz_1">
-                <label for="father">Is his/her Father alive ?</label>
+                <label for="father">1 : Is his/her Father alive ?</label>
                 <select name="father" id="father_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="faraiz_12" id="farz_2">
-                <label for="grand_father">Is his/her Grand Father alive ?</label>
+                <label for="grand_father">2 : Is his/her Grand Father alive ?</label>
                 <select name="grand_father" id="grand_father_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="faraiz_12" id="farz_3">
-                <label for="husband">Was her husband alive when she died ?</label>
+                <label for="husband">3 : Was her husband alive when she died ?</label>
                 <select name="husband" id="husband_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="faraiz_12" id="farz_4">
-                <label for="stepbrother">is his/her stepbrother alive ?</label>
+                <label for="stepbrother">4 : is his/her stepbrother alive ?</label>
                 <select name="stepbrother" id="stepbrother_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -72,11 +72,11 @@
                     <option value="18">18</option>
                     <option value="19">19</option>
                     <option value="20">20</option>
-                    
+
                 </select>
             </div>
             <div class="faraiz_12" id="farz_5">
-                <label for="stepsister">is his/her stepsister alive ?</label>
+                <label for="stepsister">5 : is his/her stepsister alive ?</label>
                 <select name="stepsister" id="stepsister_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -102,14 +102,14 @@
                 </select>
             </div>
             <div class="faraiz_12" id="farz_6">
-                <label for="wife">Was his wife alive when he died ?</label>
+                <label for="wife">6 : Was his wife alive when he died ?</label>
                 <select name="wife" id="wife_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="faraiz_12" id="farz_7">
-                <label for="daughter">"does he/she have a daughter ?</label>
+                <label for="daughter">7 : does he/she have a daughter ?</label>
                 <select name="daughter" id="daughter_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -135,7 +135,7 @@
                 </select>
             </div>
             <div class="faraiz_12" id="farz_8">
-                <label for="granddaughter">"does he/she have a granddaughter ?</label>
+                <label for="granddaughter">8 : does he/she have a granddaughter ?</label>
                 <select name="granddaughter" id="granddaughter_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -161,7 +161,7 @@
                 </select>
             </div>
             <div class="faraiz_12" id="farz_9">
-                <label for="fullsister">"does he/she have a full sister ?</label>
+                <label for="fullsister">9 : does he/she have a full sister ?</label>
                 <select name="fullsister" id="fullsister_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -187,7 +187,7 @@
                 </select>
             </div>
             <div class="faraiz_12" id="farz_10">
-                <label for="half_sister_(paternal)">"Is his/her half-sister (paternal) alive ?</label>
+                <label for="half_sister_(paternal)">10 : Is his/her half-sister (paternal) alive ?</label>
                 <select name="half_sister_(paternal)" id="half_sister_(paternal)_ashabeFaraiz">
                     <option value="No">No</option>
                     <option value="1">1</option>
@@ -213,21 +213,180 @@
                 </select>
             </div>
             <div class="faraiz_12" id="farz_11">
-                <label for="mother">Is his/her mother alive ?</label>
+                <label for="mother">11 : Is his/her mother alive ?</label>
                 <select name="mother" id="mother_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="faraiz_12" id="farz_12">
-                <label for="grand_mother">Is his/her Grand mother alive ?</label>
+                <label for="grand_mother">12 : Is his/her Grand mother alive ?</label>
                 <select name="grand_mother" id="grand_mother_ashabeFaraiz">
                     <option value="yes">Yes</option>
                     <option value="No">No</option>
                 </select>
-            </div> 
-            
-            <button onclick="maslak_selection()" type="button">Submit</button>
+            </div>
+            <div class="asbaa_6" id="asbaa_1">
+                <label for="son">13 : Does the deceased have any son ?</label>
+                <select name="son" id="son_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="asbaa_6" id="asbaa_2">
+                <label for="grandson">14 : Does the deceased have any grandson ?</label>
+                <select name="grandson" id="grandson_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="asbaa_6" id="asbaa_3">
+                <label for="brothers">15 : Does the deceased have any brothers ?</label>
+                <select name="brothers" id="brothers_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="asbaa_6" id="asbaa_4">
+                <label for="nephews">16 : Does the deceased have any nephews ?</label>
+                <select name="nephews" id="nephews_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="asbaa_6" id="asbaa_5">
+                <label for="uncle">17 : Does the deceased have any uncle ?</label>
+                <select name="uncle" id="uncle_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="asbaa_6" id="asbaa_6">
+                <label for="cousins">18 : Does the deceased have any paternal cousins ?</label>
+                <select name="cousins" id="cousins_asbaa">
+                    <option value="No">No</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button onclick="to_go_asbaa_section ()" id="faraiz_details_submit_btn" type="button">Submit</button>
+        </form>
+        <form style="display: none;" id="third_div_solution_page_ashabeFaraiz" action="" method="get">
+            <h1>Inheritor's Details</h1>
+
         </form>
     </div>
     <script src="solutionpage.js"></script>
